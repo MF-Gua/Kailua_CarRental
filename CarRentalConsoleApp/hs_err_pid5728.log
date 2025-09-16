@@ -1,0 +1,237 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 671088640 bytes. Error detail: G1 virtual space
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   This process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Zero Based Compressed Oops mode in which the Java heap is
+#     placed in the first 32GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 32GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (os_windows.cpp:3710), pid=5728, tid=12036
+#
+# JRE version:  (17.0.16+8) (build )
+# Java VM: OpenJDK 64-Bit Server VM (17.0.16+8-LTS, mixed mode, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2025.2\lib\idea_rt.jar=60265 -Dfile.encoding=UTF-8 CarRentalConsoleApp
+
+Host: AMD Ryzen 5 5600X 6-Core Processor             , 12 cores, 39G,  Windows 10 , 64 bit Build 19041 (10.0.19041.5915)
+Time: Tue Sep 16 21:16:42 2025 Rom, sommertid elapsed time: 0.011816 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000001e6a223aab0):  JavaThread "Unknown thread" [_thread_in_vm, id=12036, stack(0x00000087fe300000,0x00000087fe400000)]
+
+Stack: [0x00000087fe300000,0x00000087fe400000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x68ee19]
+V  [jvm.dll+0x846249]
+V  [jvm.dll+0x847fb8]
+V  [jvm.dll+0x848643]
+V  [jvm.dll+0x24cf6f]
+V  [jvm.dll+0x68bde9]
+V  [jvm.dll+0x6803aa]
+V  [jvm.dll+0x30ffc0]
+V  [jvm.dll+0x30fe62]
+V  [jvm.dll+0x3173b9]
+V  [jvm.dll+0x3695e9]
+V  [jvm.dll+0x36981d]
+V  [jvm.dll+0x2e683a]
+V  [jvm.dll+0x2e7748]
+V  [jvm.dll+0x8186fe]
+V  [jvm.dll+0x377251]
+V  [jvm.dll+0x7f6d45]
+V  [jvm.dll+0x3fd00b]
+V  [jvm.dll+0x3fec41]
+C  [jli.dll+0x52f0]
+C  [ucrtbase.dll+0x21bb2]
+C  [KERNEL32.DLL+0x17374]
+C  [ntdll.dll+0x4cc91]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00007ffa1c937018, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x000001e6a22db040 GCTaskThread "GC Thread#0" [stack: 0x00000087fe400000,0x00000087fe500000] [id=7464]
+  0x000001e6a22e7e80 ConcurrentGCThread "G1 Main Marker" [stack: 0x00000087fe500000,0x00000087fe600000] [id=17116]
+  0x000001e6a22e9f60 ConcurrentGCThread "G1 Conc#0" [stack: 0x00000087fe600000,0x00000087fe700000] [id=2056]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffa1c0e7307]
+
+VM state: not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x000001e6a2236620] Heap_lock - owner thread: 0x000001e6a223aab0
+
+Heap address: 0x0000000581000000, size: 10224 MB, Compressed Oops mode: Zero based, Oop shift amount: 3
+
+CDS archive(s) mapped at: [0x0000000000000000-0x0000000000000000-0x0000000000000000), size 0, SharedBaseAddress: 0x0000000800000000, ArchiveRelocationMode: 1.
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0, Narrow klass range: 0x0
+
+GC Precious Log:
+<Empty>
+
+Heap:
+ garbage-first heap   total 0K, used 0K [0x0000000581000000, 0x0000000800000000)
+  region size 8192K, 0 young (0K), 0 survivors (0K)
+
+[error occurred during error reporting (printing heap information), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffa1c4d8979]
+
+GC Heap History (0 events):
+No events
+
+Dll operation events (1 events):
+Event: 0.009 Loaded shared library C:\Users\tobia\.jdks\ms-17.0.16\bin\java.dll
+
+Deoptimization events (0 events):
+No events
+
+Classes loaded (0 events):
+No events
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+VM Operations (0 events):
+No events
+
+Memory protections (0 events):
+No events
+
+Nmethod flushes (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x00007ff6ff730000 - 0x00007ff6ff73e000 	C:\Users\tobia\.jdks\ms-17.0.16\bin\java.exe
+0x00007ffa4f3d0000 - 0x00007ffa4f5c8000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffa4d5a0000 - 0x00007ffa4d662000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ffa4ca70000 - 0x00007ffa4cd66000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ffa4cf40000 - 0x00007ffa4d040000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ffa23020000 - 0x00007ffa23038000 	C:\Users\tobia\.jdks\ms-17.0.16\bin\jli.dll
+0x00007ffa202e0000 - 0x00007ffa202fe000 	C:\Users\tobia\.jdks\ms-17.0.16\bin\VCRUNTIME140.dll
+0x00007ffa4d6a0000 - 0x00007ffa4d83d000 	C:\WINDOWS\System32\USER32.dll
+0x00007ffa4cf10000 - 0x00007ffa4cf32000 	C:\WINDOWS\System32\win32u.dll
+0x00007ffa31f90000 - 0x00007ffa3222b000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.6280_none_60bc30a171f2f3f3\COMCTL32.dll
+0x00007ffa4da30000 - 0x00007ffa4da5b000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ffa4d8f0000 - 0x00007ffa4d98e000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ffa4cd70000 - 0x00007ffa4ce89000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ffa4d2e0000 - 0x00007ffa4d37d000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ffa4d670000 - 0x00007ffa4d69f000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ffa288d0000 - 0x00007ffa288dc000 	C:\Users\tobia\.jdks\ms-17.0.16\bin\vcruntime140_1.dll
+0x00007ffa1f970000 - 0x00007ffa1f9f9000 	C:\Users\tobia\.jdks\ms-17.0.16\bin\msvcp140.dll
+0x00007ffa1bdf0000 - 0x00007ffa1ca6a000 	C:\Users\tobia\.jdks\ms-17.0.16\bin\server\jvm.dll
+0x00007ffa4d400000 - 0x00007ffa4d4b1000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ffa4df40000 - 0x00007ffa4dfdf000 	C:\WINDOWS\System32\sechost.dll
+0x00007ffa4dac0000 - 0x00007ffa4dbe0000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ffa4cee0000 - 0x00007ffa4cf07000 	C:\WINDOWS\System32\bcrypt.dll
+0x00007ffa4d9b0000 - 0x00007ffa4da1b000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ffa4bf60000 - 0x00007ffa4bfab000 	C:\WINDOWS\SYSTEM32\POWRPROF.dll
+0x00007ffa46cb0000 - 0x00007ffa46cba000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ffa438c0000 - 0x00007ffa438e7000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffa4be30000 - 0x00007ffa4be42000 	C:\WINDOWS\SYSTEM32\UMPDC.dll
+0x00007ffa4a8d0000 - 0x00007ffa4a8e2000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007ffa28110000 - 0x00007ffa2811a000 	C:\Users\tobia\.jdks\ms-17.0.16\bin\jimage.dll
+0x00007ffa42f60000 - 0x00007ffa43161000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007ffa30a60000 - 0x00007ffa30a94000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007ffa4d0f0000 - 0x00007ffa4d172000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ffa27870000 - 0x00007ffa2787f000 	C:\Users\tobia\.jdks\ms-17.0.16\bin\instrument.dll
+0x00007ffa202b0000 - 0x00007ffa202d6000 	C:\Users\tobia\.jdks\ms-17.0.16\bin\java.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Users\tobia\.jdks\ms-17.0.16\bin;C:\WINDOWS\SYSTEM32;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.6280_none_60bc30a171f2f3f3;C:\Users\tobia\.jdks\ms-17.0.16\bin\server
+
+VM Arguments:
+jvm_args: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2025.2\lib\idea_rt.jar=60265 -Dfile.encoding=UTF-8 
+java_command: CarRentalConsoleApp
+java_class_path (initial): C:\Users\tobia\Proton Drive\mfgua\Other computers\Stationær Gua\CarRentalConsoleApp\out\production\CarRentalConsoleApp;C:\Users\tobia\Proton Drive\mfgua\Other computers\Stationær Gua\CarRentalConsoleApp\lib\mysql-connector-j-9.4.0.jar
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 4                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 3                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 10                                        {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 8388608                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 671088640                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 10720641024                               {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 8388608                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 8388608                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5839372                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122909434                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122909434                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+   size_t SoftMaxHeapSize                          = 10720641024                            {manageable} {ergonomic}
+     bool UseCompressedClassPointers               = true                           {product lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                           {product lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+PATH=C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\dotnet\;C:\Program Files\Git\cmd;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\tobia\AppData\Local\Microsoft\WindowsApps;C:\Users\tobia\AppData\Local\GitHubDesktop\bin;
+USERNAME=tobia
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=AMD64 Family 25 Model 33 Stepping 0, AuthenticAMD
+TMP=C:\Users\tobia\AppData\Local\Temp
+TEMP=C:\Users\tobia\AppData\Local\Temp
+
+
+
+Periodic native trim disabled
+
+
+---------------  S Y S T E M  ---------------
+
+OS:
+ Windows 10 , 64 bit Build 19041 (10.0.19041.5915)
+OS uptime: 0 days 5:03 hours
+Hyper-V role detected
+
+CPU: total 12 (initial active 12) (12 cores per cpu, 2 threads per core) family 25 model 33 stepping 0 microcode 0x0, cx8, cmov, fxsr, ht, mmx, 3dnowpref, sse, sse2, sse3, ssse3, sse4a, sse4.1, sse4.2, popcnt, lzcnt, tsc, tscinvbit, avx, avx2, aes, erms, clmul, bmi1, bmi2, adx, sha, fma, vzeroupper, clflush, clflushopt, hv
+Processor Information for the first 12 processors :
+  Max Mhz: 3701, Current Mhz: 3701, Mhz Limit: 3701
+
+Memory: 4k page, system-wide physical 40885M (2658M free)
+TotalPageFile size 98089M (AvailPageFile size 361M)
+current process WorkingSet (physical memory assigned to process): 10M, peak: 10M
+current process commit charge ("private bytes"): 64M, peak: 704M
+
+vm_info: OpenJDK 64-Bit Server VM (17.0.16+8-LTS) for windows-amd64 JRE (17.0.16+8-LTS), built on Jul 10 2025 00:24:24 by "MicrosoftCorporation" with unknown MS VC++:1944
+
+END.

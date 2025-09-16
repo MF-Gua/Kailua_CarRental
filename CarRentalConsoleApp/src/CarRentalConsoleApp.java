@@ -46,8 +46,7 @@ public class CarRentalConsoleApp {
         String user = sc.nextLine().trim();
         if (user.isEmpty()) user = "root";
 
-        //Jeg tiltror dig koden til min root user på WorkBench
-        System.out.print("DB Password (gormerdengustne123): ");
+        System.out.print("DB Password (Nope) ");
         String password = sc.nextLine();
 
 
